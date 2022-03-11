@@ -1,0 +1,390 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.sidebar {
+    position: sticky;
+    top:0;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    background: rgb(35 39 73);
+    height: 100vh;
+    color: #fff;
+    padding-top: 50px;
+}
+
+.logo {
+    padding-left: 10%;
+    width: 80%;
+}
+
+ul.primary-menu, ul.secondary-menu {
+    line-height: 3.2;
+    list-style-type: none;
+    align-self: right;
+    font-family: 'Karla', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: -1px;
+}
+
+.menu-icon{
+    position: relative;
+    margin-right:10px;
+    top:6px;
+}
+
+li a {
+    display: block;
+    padding-left: 12%;
+    text-decoration: none;
+    color: #fff;
+    transition-duration: 0.3s;
+}
+
+li a:hover {
+    background: rgb(25, 28, 54);
+    transition-duration: 0.2s;
+    font-size: 1.25rem;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    background: #eeeeee;
+}
+
+.main-header {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    background: #fff;
+    padding-left: 3%;
+    padding-top: 5.5%;
+    padding-right: 3%;
+    padding-bottom: 2%;
+    box-shadow: 0px 10px 15px -9px rgba(0,0,0,0.1);
+}
+
+.main-header-top {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 0;
+}
+
+.main-header-top-content {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+
+span.profile-name {
+    font-family: 'Karla', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #111;
+}
+
+.header-icon {
+    position: relative;
+    stroke: rgb(35 39 73);
+    width: 28px;
+    top: 3px;
+}
+
+.header-icon:hover {
+    fill: rgb(35 39 73);
+}
+
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+    outline:2px solid rgb(35 39 73);
+    border: 1px solid #fff;
+}
+
+#search-bar {
+    width: 80%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-radius: 30px;
+    border: 1px solid #eeeeee;
+    padding-left: 50px;
+    align-self: center;
+    background: #eeeeee url(../img/search.svg) no-repeat scroll 17px 11px;
+    background-size: 22px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    color: #111;
+    transition-duration: 0.2s;
+}
+
+#search-bar:focus {
+    outline: none;
+    box-shadow: 0px 8px 13px -8px rgba(0,0,0,0.5);
+    transition-duration: 0.3s;
+    transform: scale(1.03);
+}
+
+.profile-pic-large {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+    outline:2px solid rgb(35 39 73);
+    border: 2px solid #fff;
+}
+
+.main-header-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-header-bottom-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    color: #111;
+}
+
+span.hi, span.user-info {
+    font-family: 'Karla', sans-serif;
+}
+
+span.user-info {
+    font-weight: 600;
+    font-size: 1.6rem;
+    letter-spacing: -1px;
+}
+
+span.hi {
+    font-size: 1.1rem;
+}
+
+.main-header-bottom-right {
+    display: flex;
+    gap: 30px;
+}
+
+.header-btn {
+    padding: 10px 35px 10px 35px;
+    border: 2px solid rgb(35 39 73);
+    color: rgb(35 39 73);
+    background: #fff;
+    font-size: 1.15rem;
+    border-radius: 25px;
+    font-weight: 600;
+    font-family: 'Karla', sans-serif;
+    transition-duration: 0.3s;
+    letter-spacing: -1px;
+}
+
+
+
+.header-btn:hover {
+    cursor: pointer;
+    background: rgb(35 39 73);
+    border: 2px solid rgb(35 39 73);
+    color: #fff;
+    transform: scale(1.08);
+    transition-duration: 0.3s;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 2.8fr 1fr;
+    padding: 4%;
+    gap: 35px;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    gap: 40px;
+}
+
+h2 {
+    font-family: 'Karla';
+    font-weight: 700;
+    font-size: 1.9rem;
+    letter-spacing: -1px;
+    color: #111;
+}
+
+.project-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+}
+
+.pcard {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    background: #fff;
+    color:#111;
+    width: 100%;
+    height: 100%;
+    padding: 7%;
+    border-radius: 15px;
+    border-left: 6px solid rgb(58, 63, 114);
+   /** box-shadow: 0px 15px 40px 5px #dedfe3; **/
+   box-shadow: 2px 6px 15px -3px rgba(0,0,0,0.2);
+   transition-duration: 0.4s;
+
+}
+
+.pcard:hover {
+    box-shadow: 5px 4px 29px -2px rgba(0,0,0,0.2);
+    transform: scale(1.03);
+    transition-duration: 0.4s;
+}
+
+.pcard-content {
+    font-family: 'Karla';
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 16%;
+}
+
+.pcard-title, h4 {
+    font-family: 'Karla';
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.pcard-btns {
+    display: flex;
+    align-self: flex-end;
+    gap: 12px;
+    position: absolute;
+    bottom: 22px;
+}
+
+.pcard-icon {
+    width: 25px;
+    stroke:rgb(35 39 73);
+}
+
+.pcard-icon:hover {
+    fill:rgb(112, 121, 204);
+}
+
+.right-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 33px;
+    margin-top: 6.5%;
+}
+
+.announcements, .trending {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.ann-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    background: rgb(35 39 73);
+    color:#fff;
+    width: 100%;
+    height: 100%;
+    padding: 10%;
+    border-radius: 15px;
+    box-shadow: 2px 6px 15px -3px rgba(0,0,0,0.2);
+}
+
+.ann-card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-bottom: 1px solid #999;
+}
+
+.ann-card-content:last-child {
+    border-bottom: none;
+}
+
+.ann-card-content p {
+    font-family: 'Karla';
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.trend-card {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    background: rgb(35 39 73);
+    color:#fff;
+    width: 100%;
+    height: 100%;
+    padding: 12%;
+    border-radius: 15px;
+    box-shadow: 2px 6px 15px -3px rgba(0,0,0,0.2);
+}
+
+.tend-card-content {
+    display: flex;
+    gap: 15px;
+}
+.trend-profile-pic{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+    outline:2px solid #fff;
+}
+
+.trend-img {
+    align-self: center;
+}
+
+.trend-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.trend-name {
+    font-family: 'Karla', sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.trend-info p {
+    font-family: 'Karla', sans-serif;
+    font-weight: 300;
+
+}
